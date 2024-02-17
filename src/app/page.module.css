@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  gap: 5px;
+  align-items: start;
+  justify-content: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.main input,
+.main button {
+  border-radius: 5px;
+  padding: 10px;
+}
