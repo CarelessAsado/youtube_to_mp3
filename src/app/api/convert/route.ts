@@ -20,6 +20,8 @@ export async function POST(Request: Request) {
     const videoInfo = await ytdl.getInfo(urlToYoutube);
 
     const audioFormat = ytdl.filterFormats(videoInfo.formats, "audioonly")[0];
+    console.log(audioFormat);
+
     const audioReadableStream = ytdl.downloadFromInfo(videoInfo, {
       filter: "audioonly",
       quality: "highestaudio",

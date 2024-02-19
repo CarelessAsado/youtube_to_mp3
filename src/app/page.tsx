@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { ERROR_KEY, HEADER_VID_TITLE_KEY } from "@/constants";
 import useErrorNotification from "./components/ErrorNotification/ErrorNotification";
 
+//TODO: hacer la chrome extension con todo packed??? o tenerlo hosteado aparte el BE y hacer api call desde chrome?
 export default function Home() {
   const [url, setUrl] = useState("");
   const { ErrorNotification, setError } = useErrorNotification();
@@ -42,6 +43,7 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <ErrorNotification />
       <input
         placeholder="Enter YouTube URL"
         value={url}
